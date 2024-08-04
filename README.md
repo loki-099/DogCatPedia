@@ -2,7 +2,8 @@
 
 Simple Project that uses [thedogapi](https://www.thedogapi.com/) and [thecatapi](https://thecatapi.com/).
 
-Tech Used:
+Techs Used:
 - ReactJS
+- React Router v6
 - TailwindCSS
 - Vite

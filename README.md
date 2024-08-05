@@ -6,4 +6,5 @@ Techs Used:
 - ReactJS
 - React Router v6
 - TailwindCSS
+- Framer Motion
 - Vite

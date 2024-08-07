@@ -4,9 +4,15 @@
 
 * {
   background-color: #FFF5F9;
-  font-family: "Modak", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   color: #1F005F;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Modak", sans-serif;
+}
+
+
 
 .choices {
   /* -webkit-text-stroke: 2px #FFF5F9; */

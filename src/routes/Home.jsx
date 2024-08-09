@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <div>
-      <img src="/assets/logo.svg" alt="" srcset="" />
+      <img src="/assets/logo.svg" alt="logo" />
       <div className='flex items-center justify-around md:px-8 lg:px-14 mt-28 mx-auto w-full'>
         <LinkMotion 
           whileHover={{ scale: 1.1, rotate: 1}} 

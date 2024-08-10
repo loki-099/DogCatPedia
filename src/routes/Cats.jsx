@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
+import CardSkeleton from '../components/CardSkeleton';
 
 const Cats = () => {
   const [breeds, setBreeds] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     axios.get('https://api.thecatapi.com/v1/breeds', {
@@ -12,8 +14,8 @@ const Cats = () => {
         'x-api-key': 'live_SLnEveffODcIe6W1Di6ahck5Yz0R6gZFEELdMlFpYkmCv5Wt9ID0SKb9Qpbrfoqq'
       }
     }).then((res) => {
-      console.log(res.data[0].name);
       setBreeds(res.data)
+      setIsLoading(false)
     }).catch(err => console.log(err))
   }, [])
 
@@ -30,6 +32,7 @@ const Cats = () => {
         </div>
         <p className='font-bold text-2xl mt-4'>Cat Breeds</p>
         <div className='grid grid-cols-2 gap-3'>
+          {isLoading && <CardSkeleton cards={8}/>}
           {breeds.map(breed => (
             <Card key={breed.id} breed={breed}/>
           ))}

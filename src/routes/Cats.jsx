@@ -4,6 +4,7 @@ import Card from '../components/Card';
 import { Link } from 'react-router-dom';
 import CardSkeleton from '../components/CardSkeleton';
 import { CatContext } from './Root';
+import Header from '../components/Header';
 
 const Cats = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -28,11 +29,8 @@ const Cats = () => {
 
   return (
     <div>
-      <header className='flex flex-col items-center justify-center'>
-        <Link to={'/'}><img src="/assets/icon.png" alt="logo" className='w-[60px]'/></Link>
-        <h2 className='text-2xl'>Cats</h2>
-      </header>
-      <div className='mt-5'>
+      <Header/>
+      <div>
         <div className='relative w-full'>
           <input type="text" className='w-full px-2 py-1 text-xl border-2 border-[#1F005F] bg-transparent text-[#1F005F] rounded' placeholder='Search for cat breeds'/>
           <img src="/assets/search-icon.svg" alt="search" className='absolute w-8 right-0 top-[50%] translate-y-[-50%] mr-2'/>

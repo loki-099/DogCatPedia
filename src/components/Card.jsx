@@ -14,7 +14,7 @@ const Card = ({breed}) => {
     setTemperaments(temperaments)
   }
 
-  const viewInfo = () => {
+  const viewInfo = () => {  
     console.log(breed.id);
     navigate(`${breed.id}`)
   }

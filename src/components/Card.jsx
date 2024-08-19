@@ -16,7 +16,7 @@ const Card = ({breed}) => {
 
   const viewInfo = () => {
     console.log(breed.id);
-    navigate('/')
+    navigate(`${breed.id}`)
   }
 
   return (

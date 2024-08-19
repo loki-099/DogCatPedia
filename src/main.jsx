@@ -12,6 +12,7 @@ import Home from './routes/Home';
 import About from './routes/About';
 import Dogs from './routes/Dogs';
 import Cats from './routes/Cats';
+import CatInfo from './routes/CatInfo';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: "cats",
         element: <Cats/>
       },
+      {
+        path: "cats/:catId",
+        element: <CatInfo/>
+      }
     ]
   },
 ]);

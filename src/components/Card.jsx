@@ -19,6 +19,10 @@ const Card = ({breed}) => {
     navigate(`${breed.id}`)
   }
 
+  const addDefaultImg = (e) => {
+    e.target.src = "/assets/cats.svg"
+  }
+
   return (
     <div className='border-2 border-[#1F005F] rounded p-2 flex flex-col justify-between gap-y-6'>
       <div className='min-w-fit'>
@@ -27,7 +31,8 @@ const Card = ({breed}) => {
             <img
               src={`https://cdn2.thecatapi.com/images/${breed.reference_image_id}.jpg`}
               alt={breed.name}
-              className='h-full w-full object-cover'/>
+              className='h-full w-full object-cover'
+              onError={addDefaultImg}/>
           </div>
         </div>
         <p className='font-bold text-xl mt-1 leading-6'>{breed.name}</p>

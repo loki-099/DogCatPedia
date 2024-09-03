@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import Header from '../components/Header';
 import { Link, useParams } from 'react-router-dom';
 import { CatContext } from './Root';
+import '../index.css'
 
 
 const CatInfo = () => {
@@ -47,43 +48,23 @@ const CatInfo = () => {
             <p className='font-bold text-xl mb-1'>Stats</p>
             <div className='flex items-center justify-between'>
               <p className='text-base inline-block'>Affectionate: </p>
-              <progress className='ml-2 h-3 inline-block rounded-full appearance-none bg-[#d9d9d9] 
-              [&::-webkit-progress-bar]:bg-[#1F005F] 
-              [&::-moz-progress-bar]:bg-[#1F005F] 
-              [&::-webkit-progress-value]:rounded-full 
-              [&::-moz-progress-bar]:rounded-full' value={currentBreed.affection_level} max="5"></progress>
+              <progress className='progress-bar' value={currentBreed.affection_level} max="5"></progress>
             </div>
             <div className='flex items-center justify-between'>
               <p className='text-base inline-block'>Energy: </p>
-              <progress className='ml-2 h-3 inline-block rounded-full appearance-none bg-[#d9d9d9] 
-              [&::-webkit-progress-bar]:bg-[#1F005F] 
-              [&::-moz-progress-bar]:bg-[#1F005F] 
-              [&::-webkit-progress-value]:rounded-full 
-              [&::-moz-progress-bar]:rounded-full' value={currentBreed.energy_level} max="5"></progress>
+              <progress className='progress-bar' value={currentBreed.energy_level} max="5"></progress>
             </div>
             <div className='flex items-center justify-between'>
               <p className='text-base inline-block'>Vocalisation: </p>
-              <progress className='ml-2 h-3 inline-block rounded-full appearance-none bg-[#d9d9d9] 
-              [&::-webkit-progress-bar]:bg-[#1F005F] 
-              [&::-moz-progress-bar]:bg-[#1F005F] 
-              [&::-webkit-progress-value]:rounded-full 
-              [&::-moz-progress-bar]:rounded-full' value={currentBreed.vocalisation} max="5"></progress>
+              <progress className='progress-bar' value={currentBreed.vocalisation} max="5"></progress>
             </div>
             <div className='flex items-center justify-between'>
               <p className='text-base inline-block'>Intelligence: </p>
-              <progress className='ml-2 h-3 inline-block rounded-full appearance-none bg-[#d9d9d9] 
-              [&::-webkit-progress-bar]:bg-[#1F005F] 
-              [&::-moz-progress-bar]:bg-[#1F005F] 
-              [&::-webkit-progress-value]:rounded-full 
-              [&::-moz-progress-bar]:rounded-full' value={currentBreed.intelligence} max="5"></progress>
+              <progress className='progress-bar' value={currentBreed.intelligence} max="5"></progress>
             </div>
             <div className='flex items-center justify-between'>
               <p className='text-base inline-block'>Stranger Friendly: </p>
-              <progress className='ml-2 h-3 inline-block rounded-full appearance-none bg-[#d9d9d9] 
-              [&::-webkit-progress-bar]:bg-[#1F005F] 
-              [&::-moz-progress-bar]:bg-[#1F005F] 
-              [&::-webkit-progress-value]:rounded-full 
-              [&::-moz-progress-bar]:rounded-full' 
+              <progress className='progress-bar' 
               value={currentBreed.stranger_friendly} max="5"></progress>
             </div>
           </div>

@@ -18,3 +18,30 @@ h1, h2, h3, h4, h5, h6 {
   /* text-shadow: -4px 0 #FFF5F9, 0 4px #FFF5F9, 4px 0 #FFF5F9, 0 -4px #FFF5F9; */
   text-shadow: rgb(255, 245, 249) 3px 0px 0px, rgb(255, 245, 249) 2.83487px 0.981584px 0px, rgb(255, 245, 249) 2.35766px 1.85511px 0px, rgb(255, 245, 249) 1.62091px 2.52441px 0px, rgb(255, 245, 249) 0.705713px 2.91581px 0px, rgb(255, 245, 249) -0.287171px 2.98622px 0px, rgb(255, 245, 249) -1.24844px 2.72789px 0px, rgb(255, 245, 249) -2.07227px 2.16926px 0px, rgb(255, 245, 249) -2.66798px 1.37182px 0px, rgb(255, 245, 249) -2.96998px 0.42336px 0px, rgb(255, 245, 249) -2.94502px -0.571704px 0px, rgb(255, 245, 249) -2.59586px -1.50383px 0px, rgb(255, 245, 249) -1.96093px -2.27041px 0px, rgb(255, 245, 249) -1.11013px -2.78704px 0px, rgb(255, 245, 249) -0.137119px -2.99686px 0px, rgb(255, 245, 249) 0.850987px -2.87677px 0px, rgb(255, 245, 249) 1.74541px -2.43999px 0px, rgb(255, 245, 249) 2.44769px -1.73459px 0px, rgb(255, 245, 249) 2.88051px -0.838247px 0px;
 }
+
+@layer components {
+  .progress-bar {
+    @apply inline-block h-3 rounded-full appearance-none bg-gray-300;
+  }
+
+  /* Webkit (Chrome, Safari, Edge) */
+  .progress-bar::-webkit-progress-bar {
+    @apply rounded-full bg-gray-300;
+  }
+
+  .progress-bar::-webkit-progress-value {
+    @apply rounded-full bg-[#1F005F];
+  }
+
+  /* Firefox */
+  .progress-bar::-moz-progress-bar {
+    background-color: #1F005F;
+    border-radius: 9999px; /* Full rounded corners */
+  }
+
+  /* Fallback for other browsers */
+  .progress-bar::-ms-fill {
+    background-color: #1F005F;
+    border-radius: 9999px; /* Full rounded corners */
+  }
+}
